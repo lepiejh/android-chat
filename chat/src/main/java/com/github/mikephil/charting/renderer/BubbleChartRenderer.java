@@ -224,6 +224,9 @@ public class BubbleChartRenderer extends BarLineScatterCandleBubbleRenderer {
 
             final BubbleEntry entry = set.getEntryForXValue(high.getX(), high.getY());
 
+            if (entry == null){
+                continue;
+            }
             if (entry.getY() != high.getY())
                 continue;
 
